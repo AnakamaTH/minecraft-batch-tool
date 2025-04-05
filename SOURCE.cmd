@@ -1,11 +1,13 @@
 :: MADE BY ANAKAMATHEHEDGEHOG && CREDIT IF USED
 
-@echo off  && echo Please wait... && MODE 85,25
-@for /f %%a in ('echo prompt $E^| cmd') do set "esc=%%a" && @set version=1.0 && @set name=Minecraft_Batch_Tool
+@echo off  && echo Please wait...
+@for /f %%a in ('echo prompt $E^| cmd') do set "esc=%%a" && @set version=1.1 && @set name=Minecraft_Batch_Tool
 title %name% %version% by Anakama
 
 (NET FILE||(powershell start-process -FilePath '%0' -verb runas)&&(exit \B)) >NUL 2>&1
 (NET FILE||(exit)) >NUL 2>&1
+
+MODE 85,25
 
 SETLOCAL EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
@@ -29,6 +31,7 @@ if not exist C:\Users\%username%\AppData\Roaming\.minecraft\ (echo %esc%[38;5;1m
 exit
 
 :Menu
+MODE 85,30
 cls
 pushd %~dp0
 set "choice=-"
@@ -46,6 +49,9 @@ echo %esc%[38;5;154m
 echo            [ 4 ] Install Java 8
 if "%IS_X64%"=="1" echo            [ 5 ] Install Java 21
 if "%IS_X64%"=="1" echo            [ 6 ] Install Java 24
+echo %esc%[38;5;82m
+if "%IS_X64%"=="1" echo            [ 7 ] Install Modrinth
+echo            [ 8 ] Install CurseForge
 echo %esc%[38;5;9m
 echo            [ / ] Settings
 echo            [ - ] EXIT
@@ -59,7 +65,27 @@ if %choice%==3 goto:forge
 if %choice%==4 goto:java8
 if %choice%==5 if "%IS_X64%"=="1" goto:java24 else goto:Menu
 if %choice%==6 if "%IS_X64%"=="1" goto:java24 else goto:Menu
+if %choice%==7 if "%IS_X64%"=="1" goto:modrinth else goto:Menu
+if %choice%==8 goto:curseforge
 if %choice%==- goto:exit
+
+:Modrinth
+cls
+echo %esc%[38;5;154m
+echo Installing the Modrinth App (x64)
+echo %esc%[38;5;9m
+echo Waiting for Modrinth-x64.exe...
+start /wait data\Modrinth-x64.exe
+goto:Menu
+
+:curseforge
+cls
+echo %esc%[38;5;154m
+echo Installing the CurseForge App Standalone (x86)
+echo %esc%[38;5;9m
+echo Waiting for CurseForgex86.exe...
+start /wait data\CurseForgex86.exe
+goto:Menu
 
 :Settings
 cls
@@ -83,11 +109,6 @@ if %choice%==- goto:Menu
 if %choice%==1 goto:Version
 if %choice%==2 goto:BitVersion
 
-:IntroONOFF
-cls
-if %intro%=1 echo The intro is already hidden && pause && exit
-if %intro%=0 echo Hiding the intro...
-
 :Version
 cls
 echo %esc%[38;5;7m
@@ -110,6 +131,7 @@ echo.
 echo %esc%[38;5;154m
 if "%IS_X64%"=="1" echo Your System is 64 Bits (x64)
 if "%IS_X64%"=="0" echo Your System is 32 Bits (x86)
+echo.
 pause
 goto:Settings
 
@@ -187,6 +209,26 @@ if %choice%==1 goto:121Forge
 :: if %choice%==3 goto:118Forge
 if %choice%==2 goto:120Forge
 if %choice%==3 goto:116Forge
+
+:120Forge
+cls
+pushd %~dp0
+set "choice=-"
+echo %esc%[38;5;57m
+echo            __________________________________________________
+echo %esc%[38;5;10m
+echo                       Select 1.20.X Forge Version
+echo %esc%[38;5;2m
+echo            [ 1 ] 1.20.6
+echo            [ 2 ] 1.20.4
+echo %esc%[38;5;9m
+echo            [ - ] Go Back
+echo %esc%[38;5;57m
+echo            __________________________________________________
+set /p choice= Script:
+if %choice%==- goto:Forge
+if %choice%==1 goto:1206F
+if %choice%==2 goto:1204F
 
 :116Forge
 cls
@@ -288,27 +330,6 @@ if %choice%==1 goto:1215F
 if %choice%==2 goto:1214F
 if %choice%==3 goto:1213F
 
-:121Forge
-cls
-pushd %~dp0
-set "choice=-"
-echo %esc%[38;5;57m
-echo            __________________________________________________
-echo %esc%[38;5;10m
-echo                       Select 1.20.X Forge Version
-echo %esc%[38;5;2m
-echo            [ 1 ] 1.20.
-echo            [ 2 ] 1.20.46
-echo %esc%[38;5;9m
-echo            [ - ] Go Back
-echo %esc%[38;5;57m
-echo            __________________________________________________
-set /p choice= Script:
-if %choice%==- goto:Forge
-if %choice%==1 goto:1206F
-if %choice%==2 goto:1204F
-
-
 :1215F
 cls
 echo %esc%[38;5;226m
@@ -375,6 +396,8 @@ start /wait data\forge\1.20\%jar%
 goto:Menu
 
 :Exit
+echo %esc%[38;5;15m
+cls
 echo Are you sure you wanna exit?
 SET /P AREYOUSURE=(Y/N)?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO:Menu
