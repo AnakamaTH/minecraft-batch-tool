@@ -11,3 +11,5 @@ You hate teaching that one friend what to do every time you wanna play a modded 
   -  Lots of color texts!
 
 ![menu](https://github.com/user-attachments/assets/81f67efd-eac8-4956-957c-88b8c3b3ccf2)
+
+### [Discord Server](https://discord.gg/DKk7twxm5u)
