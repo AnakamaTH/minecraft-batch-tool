@@ -9,7 +9,8 @@ You hate teaching that one friend what to do every time you wanna play a modded 
  -  Windows Bit Checker.
  -   Mods file opener/creator (not any useful but stil)
   -  Lots of color texts!
+  -  
+![Menu](https://github.com/user-attachments/assets/9356968c-51f5-4a11-be7d-b200220e798b)
 
-![menu](https://github.com/user-attachments/assets/81f67efd-eac8-4956-957c-88b8c3b3ccf2)
 
 ### [Discord Server](https://discord.gg/DKk7twxm5u)
