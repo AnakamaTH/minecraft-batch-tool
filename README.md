@@ -13,4 +13,4 @@ You hate teaching that one friend what to do every time you wanna play a modded 
 ![Menu](https://github.com/user-attachments/assets/9356968c-51f5-4a11-be7d-b200220e798b)
 
 
-### [Discord Server](https://discord.gg/DKk7twxm5u)
+### [Discord Server](https://discord.gg/DKk7twxm5u) (Dead)
