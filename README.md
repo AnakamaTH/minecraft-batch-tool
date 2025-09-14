@@ -1,5 +1,5 @@
 # Minecraft Batch Tool
-You hate teaching that one friend what to do every time you wanna play a modded server or just for him to download optimization mods? Well this program will be pretty useful for you, just send them this and watch them do it!
+You hate teaching that one friend what to do every time you wanna play a modded server or just for him to download optimization mods? Well this program will be pretty useful for you, just send them this and... tell them to install Fabric.
 
 ## Features
 
