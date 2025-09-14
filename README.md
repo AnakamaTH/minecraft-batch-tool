@@ -10,8 +10,8 @@ Not so useful considering that files here are embedded and doesn't have all vers
  -   Fabric Installer (All Versions)
  -  Windows Bit Checker.
  -   Mods file opener/creator (not any useful but stil)
-  -  Lots of color texts!
-  -  
+  -  Lots of color texts for better UI!
+    
 ![Menu](https://github.com/user-attachments/assets/9356968c-51f5-4a11-be7d-b200220e798b)
 
 
