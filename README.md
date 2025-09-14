@@ -1,7 +1,7 @@
 # Minecraft Batch Tool
 You hate teaching that one friend what to do every time you wanna play a modded server or just for him to download optimization mods? Well this program will be pretty useful for you, just send them this and... tell them to install Fabric.
 
-Not so useful considering that files here are embedded and doesn't have all versions, downloadable soon but the offline version will be keeped.
+**Not so useful considering that files here are embedded and doesn't have all versions, downloadable soon but the offline version will be keeped.**
 
 ## Features
 
